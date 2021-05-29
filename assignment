@@ -16,25 +16,27 @@
 	       break;
 	   }
 	  }
-
-	   if($no1 < 0 || $no2 < 0){
+	// check integers passed are positive or not
+	   if($no1 <= 0 || $no2 <= 0){
 	    echo "-1";
 	   }
-	 
+	 //check first integer is lower than second integer
 	 else if($no1>$no2){
 	       echo "0";
 	   }
-   else if($no2>100){
-    for($n=$i; $n<$length; $n++){
-      $sum = $sum + $array[$n];
-    }echo $sum;
-   }
-   else if($no1 == $array[$i] && $no2 == $array[$j]){
-    for($n=$i; $n<=$j; $n++){
-    $sum= $sum + $array[$n];
-    }
-    echo $sum;
-    }
+      // check if second integer is greater than 100	   
+       else if($no2>100){
+        for($n=$i; $n<$length; $n++){
+         $sum = $sum + $array[$n];
+        }echo $sum;
+       }
+    // print sum
+     else if($no1 == $array[$i] && $no2 == $array[$j]){
+      for($n=$i; $n<=$j; $n++){
+       $sum= $sum + $array[$n];
+       }
+       echo $sum;
+       }
     else
 	   {
 	       echo "0";
